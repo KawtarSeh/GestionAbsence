@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.AddCoursePage"
+             BackgroundColor="LightBlue">
+    <ContentPage.Resources>
+        <!-- Palette de couleurs -->
+        <Color x:Key="PrimaryColor">#1976D2</Color>
+        <Color x:Key="SecondaryColor">#BBDEFB</Color>
+        <Color x:Key="TextColor">#FFFFFF</Color>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <!-- Titre -->
+        <Label Text="Ajouter un Cours"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource PrimaryColor}"
+               Margin="0,0,0,20"/>
+
+        <!-- Formulaire dans une bordure au centre -->
+        <Border 
+                Stroke="{StaticResource PrimaryColor}"
+                StrokeThickness="1"
+                BackgroundColor="{StaticResource SecondaryColor}"
+                Padding="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15" />
+            </Border.StrokeShape>
+            <StackLayout Spacing="15" WidthRequest="300">
+                <Label Text="Nom du cours" 
+                       FontAttributes="Bold" 
+                       TextColor="{StaticResource PrimaryColor}" />
+
+                <Entry x:Name="CourseNameEntry" 
+                       Placeholder="Nom du cours" 
+                       BackgroundColor="White" 
+                       TextColor="Black" 
+                       PlaceholderColor="Gray" />
+
+                <Label Text="Sélectionnez les filières" 
+                       FontAttributes="Bold" 
+                       TextColor="{StaticResource PrimaryColor}"/>
+                
+                <CollectionView x:Name="FilieresCollectionView" SelectionMode="Multiple">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Label Text="{Binding FiliereName}" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Button Text="Ajouter"
+                        BackgroundColor="{StaticResource PrimaryColor}" 
+                        TextColor="{StaticResource TextColor}" 
+                        CornerRadius="10" 
+                        FontAttributes="Bold" 
+                        HeightRequest="50"
+                        Clicked="OnAddCourseClicked" />
+            </StackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

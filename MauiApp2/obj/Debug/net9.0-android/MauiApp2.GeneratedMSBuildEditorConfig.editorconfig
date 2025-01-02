@@ -1,0 +1,97 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MauiApp2
+build_property.ProjectDir = C:\Users\Kaouthar\source\repos\MauiApp2\MauiApp2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/AbsencePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.AbsencePage.xaml
+build_metadata.AdditionalFiles.TargetPath = AbsencePage.xaml
+build_metadata.AdditionalFiles.RelativePath = AbsencePage.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/AddCoursePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.AddCoursePage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddCoursePage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddCoursePage.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/AddStudentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.AddStudentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddStudentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddStudentPage.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = HomePage.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/LoadingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.LoadingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoadingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoadingPage.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/SearchPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.SearchPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SearchPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SearchPage.xaml
+
+[C:/Users/Kaouthar/source/repos/MauiApp2/MauiApp2/SignUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp2.SignUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SignUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SignUpPage.xaml

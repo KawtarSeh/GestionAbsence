@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.AbsencePage"
+             Title="AbsencePage">
+    <Grid RowDefinitions="Auto, *, Auto" Padding="20">
+        <VerticalStackLayout Spacing="10">
+            <!-- Choix du cours -->
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Lesson :"
+                       FontSize="20"
+                       TextColor="#004080"
+                       VerticalOptions="Center" />
+                <Picker x:Name="coursepicker"
+                        Title="Select Course"
+                        BackgroundColor="White"
+                        TextColor="#004080"
+                        WidthRequest="150"
+                        SelectedIndexChanged="OnCourseSelected">
+                </Picker>
+            </HorizontalStackLayout>
+
+            <!-- Choix de la matière -->
+            <HorizontalStackLayout Spacing="10" Margin="0,20,0,0">
+                <Label Text="Choice :"
+                       FontSize="20"
+                       TextColor="#004080"
+                       VerticalOptions="Center" />
+                <Picker x:Name="filierepicker"
+                        Title="Select Subject"
+                        BackgroundColor="White"
+                        TextColor="#004080"
+                        WidthRequest="150"
+                        SelectedIndexChanged="OnFiliereSelected">
+                </Picker>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Label x:Name="InfoLabel"
+               Text=""
+               TextColor="#004080"
+               FontSize="16"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               IsVisible="False"
+               Grid.Row="1" />
+
+        <CollectionView x:Name="studentsCollectionView"
+                Grid.Row="1"
+                Margin="0,20,0,20"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="#004080"
+                           BorderColor="White"
+                           Padding="10"
+                           CornerRadius="5"
+                           Margin="0,0,0,10">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <Label Text="{Binding FullName}"
+                           TextColor="White"
+                           FontSize="18"
+                           VerticalOptions="Center" />
+                            <CheckBox IsChecked="{Binding IsChecked}"
+                              VerticalOptions="Center"
+                              Grid.Column="1" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <HorizontalStackLayout Grid.Row="2"
+                               Spacing="20"
+                               VerticalOptions="End"
+                               HorizontalOptions="Center"
+                               Margin="40,0">
+            <Button Text="Save"
+                    BackgroundColor="#CC0000"
+                    TextColor="White"
+                    WidthRequest="120" 
+                    Clicked="OnSaveClicked"/>
+
+            <Button Text="Cancel"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    WidthRequest="120"
+                    Clicked="OnCancelClicked"/>
+
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

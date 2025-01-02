@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.HomePage"
+             Title="HomePage"
+             BackgroundColor="LightBlue">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <!-- Message dynamique -->
+        <Border  StrokeThickness="2" BackgroundColor="white" Padding="10" Margin="5">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Label x:Name="WelcomeLabel" Text="Bonjour,"
+           FontSize="18"
+           TextColor="Black"
+           HorizontalOptions="Center" />
+        </Border>
+
+        <!-- Grille pour les cadres -->
+        <Grid RowDefinitions="Auto,Auto"
+          ColumnDefinitions="*,*"
+          HorizontalOptions="Center"
+          VerticalOptions="CenterAndExpand">
+            <!-- Add Student -->
+            <Frame Grid.Row="0" Grid.Column="0" Padding="10" CornerRadius="10"
+               BackgroundColor="White" HeightRequest="150" WidthRequest="150"
+               Margin="10" HasShadow="True">
+                <VerticalStackLayout>
+                    <Image Source="student.png" HeightRequest="100" />
+                    <Label Text="Ajouter Etudiant" FontSize="16" TextColor="Black" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFrameTapped" />
+                    <TapGestureRecognizer Tapped="NavigateToAddStudentPage" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!-- Add Course -->
+            <Frame Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="10"
+               BackgroundColor="White" HeightRequest="150" WidthRequest="150"
+               Margin="10" HasShadow="True">
+                <VerticalStackLayout>
+                    <Image Source="course.png" HeightRequest="100" />
+                    <Label Text="Ajouter cours" FontSize="16" HorizontalOptions="Center" TextColor="Black"/>
+                </VerticalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFrameTapped" />
+                    <TapGestureRecognizer Tapped="NavigateToAddCoursePage" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!-- Absence -->
+            <Frame Grid.Row="1" Grid.Column="0" Padding="10" CornerRadius="10"
+               BackgroundColor="White" HeightRequest="150" WidthRequest="150"
+               Margin="10" HasShadow="True">
+                <VerticalStackLayout>
+                    <Image Source="absence.png" HeightRequest="100" />
+                    <Label Text="Absence" FontSize="16" HorizontalOptions="Center" TextColor="Black" />
+                </VerticalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFrameTapped" />
+                    <TapGestureRecognizer Tapped="NavigateToAbsencePage" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!-- Search -->
+            <Frame Grid.Row="1" Grid.Column="1" Padding="10" CornerRadius="10"
+               BackgroundColor="White" HeightRequest="150" WidthRequest="150"
+               Margin="10" HasShadow="True">
+                <VerticalStackLayout>
+                    <Image Source="recherche.png" HeightRequest="100" />
+                    <Label Text="Rechercher" FontSize="16" HorizontalOptions="Center" TextColor="Black"/>
+                </VerticalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="NavigateToSearchPage" />
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
+
+        <!-- Bouton de déconnexion -->
+        <Button Text="Logout"
+            BackgroundColor="#1976D2"
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="10"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Clicked="OnLogoutClicked" />
+    </VerticalStackLayout>
+</ContentPage>

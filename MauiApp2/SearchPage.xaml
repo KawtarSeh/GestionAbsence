@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.SearchPage"
+             Title="SearchPage">
+    <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="Sélectionner un cours" FontAttributes="Bold"/>
+                <Picker x:Name="coursesPicker" SelectedIndexChanged="OnCourseSelected"/>
+
+                <Label Text="Sélectionner une filière" FontAttributes="Bold"/>
+                <Picker x:Name="filieresPicker" SelectedIndexChanged="OnFiliereSelected"/>
+
+                <Label Text="Sélectionner un étudiant" FontAttributes="Bold"/>
+                <Picker x:Name="studentsPicker" />
+
+                <Button Text="Rechercher" Clicked="OnSearchClicked"/>
+
+                <!-- Section de détails cachée au début -->
+                <StackLayout x:Name="detailsSection" IsVisible="False" Padding="10">
+                    <Label Text="Résultats de la Recherche"  HorizontalOptions="Center" FontAttributes="Bold" BackgroundColor="AliceBlue"/>
+                    <!-- Boules pour présences et absences -->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10">
+                        <Frame BackgroundColor="Green" CornerRadius="25" HeightRequest="65" WidthRequest="55" HorizontalOptions="Center">
+                            <Label x:Name="presentCountLabel" Text="0" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                        </Frame>
+                        <Label Text="Présent" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,0,0,0"/>
+
+                        <Frame BackgroundColor="Red" CornerRadius="25" HeightRequest="65" WidthRequest="55" HorizontalOptions="Center" Margin="20,0,0,0">
+                            <Label x:Name="absentCountLabel" Text="0" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                        </Frame>
+                        <Label Text="Absent" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,0,0,0" />
+                    </StackLayout>
+
+                    <!-- Informations de l'étudiant affichées comme un ticket -->
+                    <Frame BackgroundColor="Yellow" Padding="10" Margin="0,20,0,0" CornerRadius="10">
+                        <StackLayout>
+                            <Label x:Name="studentInfoLabel" FontAttributes="Bold" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Label x:Name="resultLabel" />
+
+                    <Label Text="Détails des Absences et Présences"  HorizontalOptions="Center" FontAttributes="Bold"  BackgroundColor="AliceBlue"/>
+
+                    <StackLayout x:Name="detailsLayout" />
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    
+</ContentPage>

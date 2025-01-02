@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.LoadingPage"
+             BackgroundColor="White"
+             Title="LoadingPage">
+    <Grid>
+
+        <Image Source="ensaaa.jpeg"
+               Aspect="AspectFill"
+               Opacity="0.8"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+
+            <!-- Label centré en haut avec taille de police 28 -->
+            <Label Text="Bienvenue cher professeur"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+
+            <Label Text="Wait till end the loading"
+                   FontSize="18"
+                   FontAttributes="Italic"
+                   TextColor="White"
+                   HorizontalOptions="Center" />
+
+            <ActivityIndicator IsRunning="True"
+                               Color="White"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               HorizontalOptions="Center" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

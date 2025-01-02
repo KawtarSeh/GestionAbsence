@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.AddStudentPage"
+             Title="Ajouter un étudiant"
+            BackgroundColor="LightBlue">
+    <ContentPage.Resources>
+        <!-- Palette de couleurs -->
+        <Color x:Key="PrimaryColor">#1976D2</Color>
+        <Color x:Key="SecondaryColor">#BBDEFB</Color>
+        <Color x:Key="TextColor">#FFFFFF</Color>
+    </ContentPage.Resources>
+
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Titre -->
+        <Label Text="Nouveau étudiant"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource PrimaryColor}"
+               Margin="0,0,0,20"/>
+
+        <!-- Formulaire dans un cadre -->
+        <Frame Grid.Row="1"
+               BackgroundColor="{StaticResource SecondaryColor}"
+               CornerRadius="15"
+               Padding="20"
+               HasShadow="True"
+               BorderColor="{StaticResource PrimaryColor}">
+            <StackLayout Spacing="15">
+                <Entry x:Name="CinEntry"
+                       Placeholder="CIN"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontSize="16"/>
+
+                <Entry x:Name="FirstNameEntry"
+                       Placeholder="Prénom"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontSize="16"/>
+
+                <Entry x:Name="LastNameEntry"
+                       Placeholder="Nom"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontSize="16"/>
+
+                <Entry x:Name="EmailEntry"
+                       Placeholder="Email"
+                       Keyboard="Email"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontSize="16"/>
+
+                <Entry x:Name="PhoneNumberEntry"
+                       Placeholder="Téléphone"
+                       Keyboard="Telephone"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontSize="16"/>
+
+                <Label Text="Sélectionner une filière"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource PrimaryColor}"/>
+
+                <Picker x:Name="filieresPicker"
+                        BackgroundColor="White"
+                        TextColor="Black"/>
+
+                
+                <Button Text="Ajouter"
+                        Clicked="OnAddStudentClicked"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        TextColor="{StaticResource TextColor}"
+                        CornerRadius="10"
+                        FontAttributes="Bold"
+                        HeightRequest="50"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

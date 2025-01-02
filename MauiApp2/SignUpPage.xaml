@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.SignUpPage"
+             Title="SignUpPage">
+    <Grid>
+        <!-- Image de fond -->
+        <Image Source="ensaaa.jpg"
+            Aspect="AspectFill"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
+
+        <!-- BoxView semi-transparent pour simuler un flou -->
+        <BoxView BackgroundColor="Black"
+              Opacity="0.75"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand" />
+
+        <!-- Contenu de la page -->
+        <Frame BorderColor="White"
+            CornerRadius="10"
+            Padding="20"
+            Margin="30"
+            BackgroundColor="Transparent"
+            HasShadow="True"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand">
+            <VerticalStackLayout Spacing="30">
+
+                <!-- Icône -->
+                <Image Source="icone.jpg" 
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="CenterAndExpand" />
+
+                <!-- Champ du nom d'utilisateur -->
+                <Entry x:Name="UsernameEntry"
+                    Placeholder="Username"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    PlaceholderColor="White"
+                    FontSize="18"
+                    HorizontalOptions="FillAndExpand" />
+
+                <!-- Champ du mot de passe -->
+                <Entry x:Name="PasswordEntry"
+                    Placeholder="Password"
+                    IsPassword="True"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    PlaceholderColor="White"
+                    FontSize="18" 
+                    HorizontalOptions="FillAndExpand" />
+                <Entry x:Name="PasswordReEntry"
+                    Placeholder="Confirm your Password"
+                    IsPassword="True"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    PlaceholderColor="White"
+                    FontSize="18" 
+                    HorizontalOptions="FillAndExpand" />
+
+
+                <Button Text="Register"
+                     BackgroundColor="Black"
+                     TextColor="White"
+                     WidthRequest="200"
+                     HeightRequest="50"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand" 
+                     Clicked="OnRegisterClicked"/>
+
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
